@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -59,12 +60,17 @@ export default function Contact() {
   };
 
   return (
-    <section className="py-20 bg-primary text-white" id="contact">
+    <section className="py-20 bg-primary text-white overflow-hidden" id="contact">
       <div className="px-5 md:px-10 max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
           
           {/* Left Block: Direct Contact Info */}
-          <div>
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+          >
             <h2 className="font-display-lg text-4xl md:text-5xl mb-8 tracking-tight font-serif text-[#fdf9f4]">
               LET'S CREATE SOMETHING MEANINGFUL, TOGETHER.
             </h2>
@@ -73,7 +79,13 @@ export default function Contact() {
             </p>
             
             <div className="space-y-6">
-              <div className="flex items-center gap-6">
+              <motion.div 
+                initial={{ opacity: 0, y: 15 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.2 }}
+                className="flex items-center gap-6"
+              >
                 <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center text-[#ffdcc3] flex-shrink-0">
                   <span className="material-symbols-outlined">call</span>
                 </div>
@@ -81,9 +93,15 @@ export default function Contact() {
                   <p className="text-[10px] font-label-sm uppercase tracking-widest opacity-60">Phone</p>
                   <p className="font-body-md text-sm md:text-base font-semibold">+91 7382938312</p>
                 </div>
-              </div>
+              </motion.div>
 
-              <div className="flex items-center gap-6">
+              <motion.div 
+                initial={{ opacity: 0, y: 15 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.3 }}
+                className="flex items-center gap-6"
+              >
                 <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center text-[#ffdcc3] flex-shrink-0">
                   <span className="material-symbols-outlined">mail</span>
                 </div>
@@ -91,9 +109,15 @@ export default function Contact() {
                   <p className="text-[10px] font-label-sm uppercase tracking-widest opacity-60">Email</p>
                   <p className="font-body-md text-sm md:text-base font-semibold">loomhousemedia9@gmail.com</p>
                 </div>
-              </div>
+              </motion.div>
 
-              <div className="flex items-center gap-6">
+              <motion.div 
+                initial={{ opacity: 0, y: 15 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.4 }}
+                className="flex items-center gap-6"
+              >
                 <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center text-[#ffdcc3] flex-shrink-0">
                   <span className="material-symbols-outlined">location_on</span>
                 </div>
@@ -101,11 +125,17 @@ export default function Contact() {
                   <p className="text-[10px] font-label-sm uppercase tracking-widest opacity-60">Location</p>
                   <p className="font-body-md text-sm md:text-base font-semibold">India | Available Worldwide</p>
                 </div>
-              </div>
+              </motion.div>
             </div>
 
             {/* Availability Block */}
-            <div className="mt-16 p-8 bg-white/5 rounded-2xl border border-white/10 max-w-md shadow-sm">
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.5, duration: 0.8 }}
+              className="mt-16 p-8 bg-white/5 rounded-2xl border border-white/10 max-w-md shadow-sm"
+            >
               <div className="flex items-center gap-4 mb-6 text-[#ffdcc3]">
                 <span className="material-symbols-outlined">schedule</span>
                 <h4 className="font-label-sm text-xs uppercase tracking-widest font-semibold">We're Available</h4>
@@ -120,11 +150,17 @@ export default function Contact() {
                   <p className="font-body-md text-xs md:text-sm font-semibold">Time Zones</p>
                 </div>
               </div>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
 
           {/* Right Block: Message Form */}
-          <div className="bg-white p-8 md:p-10 rounded-2xl text-primary shadow-xl">
+          <motion.div 
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+            className="bg-white p-8 md:p-10 rounded-2xl text-primary shadow-xl"
+          >
             <h3 className="font-headline-md text-2xl mb-8 italic text-center font-serif text-primary">
               Get in touch
             </h3>
@@ -144,8 +180,12 @@ export default function Contact() {
             )}
 
             <form onSubmit={handleSubmit} className="space-y-6">
-              <div>
-                <input
+              <div className="overflow-hidden">
+                <motion.input
+                  initial={{ opacity: 0, y: 15 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.1 }}
                   className="w-full bg-transparent border-b border-primary/20 py-3 focus:outline-none focus:border-primary transition-colors text-primary text-sm placeholder:text-primary/40"
                   placeholder="Name"
                   type="text"
@@ -155,8 +195,12 @@ export default function Contact() {
                 />
               </div>
 
-              <div>
-                <input
+              <div className="overflow-hidden">
+                <motion.input
+                  initial={{ opacity: 0, y: 15 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.2 }}
                   className="w-full bg-transparent border-b border-primary/20 py-3 focus:outline-none focus:border-primary transition-colors text-primary text-sm placeholder:text-primary/40"
                   placeholder="Email"
                   type="email"
@@ -166,8 +210,12 @@ export default function Contact() {
                 />
               </div>
 
-              <div className="relative">
-                <select
+              <div className="relative overflow-hidden">
+                <motion.select
+                  initial={{ opacity: 0, y: 15 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.3 }}
                   className="w-full bg-transparent border-b border-primary/20 py-3 focus:outline-none focus:border-primary transition-colors text-primary text-sm appearance-none cursor-pointer"
                   name="service"
                   value={formData.service}
@@ -178,31 +226,41 @@ export default function Contact() {
                   <option value="Food Photography">Food Photography</option>
                   <option value="Cinematic Reels">Cinematic Reels</option>
                   <option value="Brand Identity">Brand Identity</option>
-                </select>
+                </motion.select>
                 <div className="absolute right-0 top-3 pointer-events-none text-primary/40">
                   <span className="material-symbols-outlined">expand_more</span>
                 </div>
               </div>
 
-              <div>
-                <textarea
+              <div className="overflow-hidden">
+                <motion.textarea
+                  initial={{ opacity: 0, y: 15 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.4 }}
                   className="w-full bg-transparent border-b border-primary/20 py-3 focus:outline-none focus:border-primary transition-colors text-primary text-sm placeholder:text-primary/40"
                   placeholder="Tell us about your brand"
                   rows="4"
                   name="message"
                   value={formData.message}
                   onChange={handleChange}
-                ></textarea>
+                ></motion.textarea>
               </div>
 
-              <button
+              <motion.button
+                initial={{ opacity: 0, y: 15 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.5 }}
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
                 className="w-full py-4 bg-primary text-white font-label-sm text-xs rounded-full hover:bg-primary/95 hover:shadow-lg transition-all uppercase tracking-widest font-semibold cursor-pointer"
                 type="submit"
               >
                 SEND MESSAGE
-              </button>
+              </motion.button>
             </form>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>
