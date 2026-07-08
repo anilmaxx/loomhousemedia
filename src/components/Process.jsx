@@ -1,4 +1,5 @@
 import React from 'react';
+import img46 from '../assets/img46.jpg';
 
 export default function Process() {
   const steps = [
@@ -72,7 +73,7 @@ export default function Process() {
           {/* Right Column: Grid of workspace images */}
           <div className="order-1 md:order-2 space-y-6">
             <div className="aspect-square rounded-2xl overflow-hidden shadow-md">
-              <img src="src/assets/img46.jpg" className="w-full h-full object-cover" alt="Workspace and cameras" />
+              <img src={img46} className="w-full h-full object-cover" alt="Workspace and cameras" />
             </div>
           </div>
         </div>

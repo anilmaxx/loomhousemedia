@@ -1,4 +1,5 @@
 import React from 'react';
+import img23 from '../assets/img23.jpg';
 
 export default function Hero() {
   return (
@@ -10,7 +11,7 @@ export default function Hero() {
         <img
           alt="High-end hospitality interior design"
           className="w-full h-full object-cover grayscale-[10%] scale-105 transition-transform duration-[10s] ease-out animate-pulse-slow"
-          src="src/assets/img23.jpg"
+          src={img23}
         />
       </div>
 
