@@ -71,7 +71,7 @@ export default function Contact() {
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
           >
-            <h2 className="font-display-lg text-4xl md:text-5xl mb-8 tracking-tight font-serif text-[#fdf9f4]">
+            <h2 className="font-display-lg text-3xl sm:text-4xl md:text-5xl mb-8 tracking-tight font-serif text-[#fdf9f4]">
               LET'S CREATE SOMETHING MEANINGFUL, TOGETHER.
             </h2>
             <p className="font-body-lg text-white/80 mb-12 max-w-md">
@@ -239,7 +239,7 @@ export default function Contact() {
                   viewport={{ once: true }}
                   transition={{ delay: 0.4 }}
                   className="w-full bg-transparent border-b border-primary/20 py-3 focus:outline-none focus:border-primary transition-colors text-primary text-sm placeholder:text-primary/40"
-                  placeholder="Tell us about your brand"
+                  placeholder="Tell us about your brand(optional)"
                   rows="4"
                   name="message"
                   value={formData.message}

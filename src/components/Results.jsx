@@ -84,7 +84,7 @@ export default function Results() {
             <span className="font-label-sm text-xs uppercase tracking-widest text-primary font-semibold mb-2 block">
               Deliverables
             </span>
-            <h2 className="font-display-lg text-4xl md:text-5xl text-primary font-serif mb-4 leading-tight">
+            <h2 className="font-display-lg text-3xl sm:text-4xl md:text-5xl text-primary font-serif mb-4 leading-tight">
               RESULTS WE CAN HELP YOU ACHIEVE.
             </h2>
             <motion.div 

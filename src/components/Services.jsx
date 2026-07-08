@@ -91,10 +91,10 @@ export default function Services() {
             transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
             className="max-w-xl"
           >
-            <h2 className="font-display-lg text-4xl md:text-5xl text-primary mb-4 font-serif">
+            <h2 className="font-display-lg text-3xl sm:text-4xl md:text-5xl text-primary mb-4 font-serif">
               WHAT WE DO.
             </h2>
-            <p className="font-body-lg text-lg text-on-surface-variant italic mb-10">
+            <p className="font-body-lg text-base sm:text-lg text-on-surface-variant italic mb-10">
               End-to-end content &amp; branding solutions for hospitality brands.
             </p>
             
@@ -143,8 +143,8 @@ export default function Services() {
               className="w-full h-full object-cover"
               alt="Plated dish close-up"
             />
-            <div className="absolute inset-0 bg-black/40 flex items-center justify-center p-8 md:p-12 text-center backdrop-blur-[1px] pointer-events-none">
-              <p className="text-white font-headline-md text-2xl md:text-3xl italic font-serif leading-relaxed drop-shadow">
+            <div className="absolute inset-0 bg-black/40 flex items-center justify-center p-6 sm:p-8 md:p-12 text-center backdrop-blur-[1px] pointer-events-none">
+              <p className="text-white font-headline-md text-lg sm:text-2xl md:text-3xl italic font-serif leading-relaxed drop-shadow">
                 "We turn ambiance, flavor and experience into content that converts."
               </p>
             </div>

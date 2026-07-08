@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import img46 from '../assets/img46.jpg';
+import img46 from '../assets/img46.jpeg';
 
 export default function Process() {
   const steps = [
@@ -75,7 +75,7 @@ export default function Process() {
               <span className="font-label-sm text-xs uppercase tracking-widest text-primary font-semibold mb-2 block">
                 Workflow
               </span>
-              <h2 className="font-display-lg text-4xl md:text-5xl text-primary font-serif mb-4">
+              <h2 className="font-display-lg text-3xl sm:text-4xl md:text-5xl text-primary font-serif mb-4">
                 OUR PROCESS.
               </h2>
               <p className="font-body-md text-on-surface-variant mb-12">

@@ -37,22 +37,29 @@ export default function Hero() {
           </motion.div>
         </motion.div>
 
-        <h1 className="font-display-lg text-6xl md:text-8xl mb-4 tracking-wider font-extralight text-[#fdf9f4] hero-title flex justify-center flex-wrap">
-          {title.split("").map((char, index) => (
-            <motion.span
-              key={index}
-              initial={{ opacity: 0, y: 25 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{
-                duration: 0.8,
-                delay: 0.2 + index * 0.06,
-                ease: [0.22, 1, 0.36, 1]
-              }}
-              className="inline-block"
-              style={{ display: char === " " ? "inline" : "inline-block" }}
-            >
-              {char === " " ? "\u00A0" : char}
-            </motion.span>
+        <h1 className="font-display-lg text-5xl sm:text-6xl md:text-8xl mb-4 tracking-wider font-extralight text-[#fdf9f4] hero-title flex justify-center flex-wrap gap-x-4">
+          {title.split(" ").map((word, wordIdx) => (
+            <span key={wordIdx} className="inline-block whitespace-nowrap">
+              {word.split("").map((char, charIdx) => {
+                // Calculate a staggering delay relative to global index
+                const globalIdx = wordIdx * 5 + charIdx;
+                return (
+                  <motion.span
+                    key={charIdx}
+                    initial={{ opacity: 0, y: 25 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{
+                      duration: 0.8,
+                      delay: 0.2 + globalIdx * 0.05,
+                      ease: [0.22, 1, 0.36, 1]
+                    }}
+                    className="inline-block"
+                  >
+                    {char}
+                  </motion.span>
+                );
+              })}
+            </span>
           ))}
         </h1>
 
@@ -80,7 +87,7 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 1.2, ease: "easeOut" }}
           className="font-label-sm text-xs tracking-widest border border-white/20 px-4 py-1.5 rounded-full inline-block bg-white/5 hero-pill"
         >
-           PORTFOLIO
+           WELCOME TO LOOM HOUSE MEDIA
         </motion.div>
       </div>
 

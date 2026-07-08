@@ -23,7 +23,7 @@ export default function Footer() {
         </div>
 
         {/* Right Links Grid */}
-        <div className="grid grid-cols-2 gap-x-12 gap-y-4">
+        <div className="grid grid-cols-1 gap-x-12 gap-y-4">
           <a className="font-label-sm text-xs uppercase tracking-wider text-on-surface-variant hover:text-primary transition-colors" href="#services">
             Social Media Management
           </a>

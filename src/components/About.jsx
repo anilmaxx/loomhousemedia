@@ -75,7 +75,7 @@ export default function About() {
           <span className="font-label-sm text-xs uppercase tracking-widest text-primary font-semibold mb-4 block">
             About Us
           </span>
-          <h2 className="font-headline-lg text-4xl md:text-5xl text-primary mb-8 leading-tight font-serif">
+          <h2 className="font-headline-lg text-3xl sm:text-4xl md:text-5xl text-primary mb-8 leading-tight font-serif">
             Crafting Visual Stories That Grow Brands.
           </h2>
 
