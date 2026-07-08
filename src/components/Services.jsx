@@ -1,4 +1,5 @@
 import React from 'react';
+import img23 from '../assets/img23.jpg';
 
 export default function Services() {
   const mainServices = [
@@ -63,7 +64,7 @@ export default function Services() {
           {/* Right Block: Image with Quote Overlay */}
           <div className="relative rounded-2xl overflow-hidden aspect-square shadow-lg group">
             <img
-              src="src/assets/img23.jpg"
+              src={img23}
               className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
               alt="Plated dish close-up"
             />
