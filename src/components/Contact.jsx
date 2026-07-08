@@ -239,7 +239,7 @@ export default function Contact() {
                   viewport={{ once: true }}
                   transition={{ delay: 0.4 }}
                   className="w-full bg-transparent border-b border-primary/20 py-3 focus:outline-none focus:border-primary transition-colors text-primary text-sm placeholder:text-primary/40"
-                  placeholder="Tell us about your brand(optional)"
+                  placeholder="Tell us about your brand (optional)"
                   rows="4"
                   name="message"
                   value={formData.message}
